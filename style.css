@@ -1,0 +1,294 @@
+/* ===========================
+   マジロ 公式サイト
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Variables */
+:root {
+  --bg:        #FAF6F0;
+  --bg-alt:    #F3EDE3;
+  --brown:     #5C3317;
+  --brown-mid: #8B6347;
+  --brown-lt:  #D4956A;
+  --cream:     #F5E6C8;
+  --text:      #3D2B1F;
+  --text-lt:   #7A5C44;
+  --white:     #FFFDF9;
+  --radius:    16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* ===========================
+   HERO
+   =========================== */
+#hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px 60px;
+  text-align: center;
+  gap: 24px;
+}
+
+#hero img {
+  width: min(320px, 72vw);
+  filter: drop-shadow(0 8px 24px rgba(92,51,23,0.12));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+#hero h1 {
+  font-family: 'Klee One', cursive;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--brown);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+#hero .sub {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--text-lt);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--brown);
+  color: var(--white);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { background: var(--brown-mid); transform: translateY(-2px); }
+
+/* ===========================
+   CONCEPT
+   =========================== */
+#concept {
+  background: var(--bg-alt);
+  padding: 96px 24px;
+}
+
+#concept .inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#concept .label {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--brown-lt);
+  text-transform: uppercase;
+}
+
+#concept h2 {
+  font-family: 'Klee One', cursive;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--brown);
+  line-height: 1.5;
+}
+
+#concept p {
+  font-size: 1rem;
+  color: var(--text-lt);
+  line-height: 2;
+}
+
+blockquote {
+  border-left: 3px solid var(--brown-lt);
+  padding: 16px 24px;
+  background: var(--white);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: 'Klee One', cursive;
+  font-size: 1.1rem;
+  color: var(--brown);
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* ===========================
+   CHARACTER
+   =========================== */
+#character {
+  padding: 96px 24px;
+}
+
+#character .inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section-title {
+  font-family: 'Klee One', cursive;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--brown);
+  text-align: center;
+}
+
+.profile-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  box-shadow: 0 4px 24px rgba(92,51,23,0.06);
+}
+
+.profile-card dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+}
+
+.profile-card dt {
+  font-size: 0.8rem;
+  color: var(--brown-lt);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.profile-card dd {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.expressions img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(92,51,23,0.08);
+}
+
+.expressions p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-lt);
+  margin-top: 12px;
+}
+
+/* ===========================
+   CONTENTS
+   =========================== */
+#contents {
+  background: var(--bg-alt);
+  padding: 96px 24px;
+}
+
+#contents .inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.content-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 4px 24px rgba(92,51,23,0.06);
+}
+
+.content-card .icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+
+.content-card h3 {
+  font-family: 'Klee One', cursive;
+  font-size: 1.1rem;
+  color: var(--brown);
+  margin-bottom: 6px;
+}
+
+.content-card p {
+  font-size: 0.88rem;
+  color: var(--text-lt);
+  line-height: 1.7;
+}
+
+.content-card .badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.72rem;
+  background: var(--cream);
+  color: var(--brown-mid);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.sns-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sns-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.sns-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+.sns-btn.x    { background: #000; color: #fff; }
+.sns-btn.ig   { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid var(--cream);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--text-lt);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 600px) {
+  .profile-card { flex-direction: column; }
+}
