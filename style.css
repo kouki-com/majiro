@@ -271,6 +271,7 @@ blockquote {
 .sns-btn:hover { opacity: 0.85; transform: translateY(-2px); }
 .sns-btn.x    { background: #000; color: #fff; }
 .sns-btn.ig   { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+.sns-btn.line { background: #06C755; color: #fff; }
 
 /* ===========================
    FOOTER
